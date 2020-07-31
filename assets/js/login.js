@@ -51,6 +51,7 @@ $(function () {
                 if (res.status !== 0) return layui.layer.msg(res.message);
                 layui.layer.msg('登录成功！');
                 sessionStorage.setItem('token', res.token);
+                console.log(location.href);
                 location.href = '../../index.html';
             }
         });
