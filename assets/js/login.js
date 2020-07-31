@@ -52,7 +52,8 @@ $(function () {
                 layui.layer.msg('登录成功！');
                 sessionStorage.setItem('token', res.token);
                 console.log(location.href);
-                location.href = '../../index.html';
+                $('.header img').prop('src', '../images/login_bg.jpg');
+                // location.href = '../../index.html';
             }
         });
     });
