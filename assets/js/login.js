@@ -49,10 +49,9 @@ $(function () {
             data: $('#log_form').serialize(),
             success: function (res) {
                 if (res.status !== 0) return layui.layer.msg(res.message);
-                layui.layer.msg('登录成功！', function () {
-                    localStorage.setItem('token', res.token);
-                    location.href = '/index.html';
-                });
+                layui.layer.msg('登录成功！');
+                localStorage.setItem('token', res.token);
+                location.href = '/index.html';
             }
         });
     });
