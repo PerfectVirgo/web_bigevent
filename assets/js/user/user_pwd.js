@@ -25,7 +25,7 @@ $(function () {
             success: function (res) {
                 if (res.status !== 0) return layui.layer.msg(res.message);
                 layui.layer.msg('更新密码成功，请成功登录', function () {
-                    localStorage.removeItem('token');
+                    sessionStorage.removeItem('token');
                     window.parent.location.href = '/login.html';
                 });
             }

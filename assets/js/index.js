@@ -14,7 +14,7 @@ function getUserInfo() {
         async: false,   //同步  
         complete: function (res) {
             if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-                localStorage.removeItem('token');
+                sessionStorage.removeItem('token');
                 location.href = '/login.html';
             }
         }
@@ -44,7 +44,7 @@ $(function () {
     // 退出首页
     $('#logout_btn').on('click', function () {
         layer.confirm('确定退出登录？', { icon: 3, title: '提示' }, function (index) {
-            localStorage.removeItem('token');
+            sessionStorage.removeItem('token');
             location.href = '/login.html';
             layer.close(index);
         });
