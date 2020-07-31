@@ -41,5 +41,5 @@ $(function () {
                 window.parent.getUserInfo();
             }
         })
-    })
+    });
 })

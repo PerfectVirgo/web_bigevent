@@ -1,3 +1,4 @@
+// 发送Ajax前按需拼接url和请求头
 $.ajaxPrefilter(function (options) {
     if (options.url.indexOf('/my/') !== -1) {
         options.headers = {

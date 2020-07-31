@@ -47,7 +47,6 @@ $(function () {
                 if (res.status !== 0) return layui.layer.msg(res.message);
                 layui.layer.msg(res.message);
                 window.parent.getUserInfo();
-                // window.parent.renderAvatar();
             }
         })
     });

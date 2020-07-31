@@ -23,7 +23,7 @@ function getUserInfo() {
 
 // 渲染头像
 function renderAvatar() {
-    console.log('render');
+    if (user_info.status !== 0) return;
     let name = user_info.data.nickname || user_info.data.username;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name);
     if (user_info.data.user_pic) {
@@ -37,11 +37,8 @@ function renderAvatar() {
 
 
 $(function () {
-    console.log('入口i函数');
 
     // jQuery的入口函数的执行时机
-    if (user_info.status !== 0) return layui.layer.msg('获取用户信息失败！');
-
     renderAvatar();
 
     // 退出首页
@@ -51,5 +48,5 @@ $(function () {
             location.href = '/login.html';
             layer.close(index);
         });
-    })
+    });
 })
