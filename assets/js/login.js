@@ -43,19 +43,19 @@ $(function () {
     // 登录表单提交时发送Ajax请求
     $('#log_form').on('submit', function (e) {
         e.preventDefault();
-        $.ajax({
-            type: 'POST',
-            url: '/api/login',
-            data: $('#log_form').serialize(),
-            success: function (res) {
-                if (res.status !== 0) return layui.layer.msg(res.message);
-                layui.layer.msg('登录成功！');
-                sessionStorage.setItem('token', res.token);
-                console.log(location.href);
-                $('.header img').prop('src', '../images/login_bg.jpg');
-                // location.href = '../../index.html';
-            }
-        });
+        // $.ajax({
+        //     type: 'POST',
+        //     url: '/api/login',
+        //     data: $('#log_form').serialize(),
+        //     success: function (res) {
+        //         if (res.status !== 0) return layui.layer.msg(res.message);
+        //         layui.layer.msg('登录成功！');
+        //         sessionStorage.setItem('token', res.token);
+        //         console.log(location.href);
+        //         $('.header img').prop('src', '../images/login_bg.jpg');
+        //         // location.href = '../../index.html';
+        //     }
+        // });
     });
 
 })
