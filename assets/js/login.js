@@ -43,6 +43,7 @@ $(function () {
     // 登录表单提交时发送Ajax请求
     $('#log_form').on('submit', function (e) {
         e.preventDefault();
+        alert(111);
         // $.ajax({
         //     type: 'POST',
         //     url: '/api/login',
